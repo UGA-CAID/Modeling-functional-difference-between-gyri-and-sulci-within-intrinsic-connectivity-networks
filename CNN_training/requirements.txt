@@ -1,0 +1,4 @@
+easydict
+PyYAML
+opencv-python
+pytorch

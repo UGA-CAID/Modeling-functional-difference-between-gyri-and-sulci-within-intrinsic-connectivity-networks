@@ -1,0 +1,76 @@
+BASIC:
+  BACKUP_CODES: false
+  BACKUP_DIR: output/contacted_training/codes
+  BACKUP_LIST:
+  - lib
+  - experiments
+  - tools
+  CHECKPOINT_DIGITS: 4
+  CREATE_OUTPUT_DIR: true
+  LOG_DIR: logs/topk_mean/SOCIAL/07
+  PIN_MEMORY: true
+  ROOT_DIR: /disk2/wqy/Projects/PyTorch_RSN/CNN_training
+  SEED: 0
+  SHOW_CFG: true
+  WORKERS: 8
+CUDNN:
+  BENCHMARK: false
+  DETERMINISTIC: true
+  ENABLE: true
+DATASET:
+  CLS_NUM: 2
+  DATA_DIR: data
+  NUM_POINTS: 405
+  TRAIN_SPLIT: train/SOCIAL/07
+  VAL_SPLIT: test_on_sub_contacted/01/1/
+NETWORK:
+  CASMODULE_DROPOUT: 0.7
+  FEAT_DIM: 1
+  TOPK_K_R: 0.125
+TEST:
+  ACT_THRESH_MAX: 0.25
+  ACT_THRESH_MIN: 0
+  ACT_THRESH_STEP: 0.025
+  BATCH_SIZE: 1924
+  CLS_SCORE_TH: 0.25
+  CONF_GAMMA: 0.2
+  EVAL_INTERVAL: 1
+  IOU_TH:
+  - 0.1
+  - 0.2
+  - 0.3
+  - 0.4
+  - 0.5
+  - 0.6
+  - 0.7
+  - 0.8
+  - 0.9
+  MODEL_DIR: output/contacted_training/01/
+  NMS_THRESHOLD: 0.7
+  OUTER_LAMBDA: 0.25
+  RESULT_DIR: output/contacted_training/test_on_sub_contacted/01/1/
+  VIDEOS_24FPS:
+  - video_test_0001207
+  VIDEOS_25FPS:
+  - video_validation_0000311
+  - video_validation_0000413
+  - video_validation_0000419
+  - video_validation_0000420
+  - video_validation_0000484
+  - video_validation_0000666
+  - video_test_0000950
+  - video_test_0001058
+  - video_test_0001195
+  - video_test_0001255
+  - video_test_0001459
+TRAIN:
+  BATCH_SIZE: 128
+  BETAS:
+  - 0.9
+  - 0.999
+  EPOCH_NUM: 200
+  LR: 0.01
+  LR_DECAY_EPOCHS: []
+  LR_DECAY_FACTOR: 0.1
+  OUTPUT_DIR: output/topk_mean/SOCIAL/07
+  WEIGHT_DECAY: 0.0005
